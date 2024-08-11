@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountBS</title>
+    <!-- bootstrap para personalização do botão -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- centralizando o botão com css -->
+    <style type="text/css">
+        #centralizar {
+            position:absolute; 
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- botão que vai chamar o script -->
+    <div id="centralizar">
+        <button type="button" class="btn btn-danger" onclick="countBS()" >Iniciar Script</button>
+    </div>
+    <script>
+        //definindo a função do script
+        function countBS(palavra) {
+            var palavra = String(prompt("Escreva uma palavra:"));
+            var letra = String(prompt("Qual letra você quer contar?"));
+            var cont = 0
+                for (let count = 0; count < palavra.length; count++) {
+                    if (palavra[count] === letra){
+                    cont++;}
+                    };
+                        if (cont == 0)
+                            alert("A letra " + "'' " + letra + " ''" +" não se repete nenhuma vez na palavra "+ "'' " + palavra+ " ''");
+                    
+                        else
+                            alert("A letra " + "'' " + letra  + " ''"+ " se repete " +  cont + " vezes na palavra " + "'' " + palavra +" ''." );
+        }                 
+    </script>
+</body>
+</html>
